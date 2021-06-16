@@ -1,0 +1,14 @@
+bookings:
+  externalServiceHost: https://www.maersk.com/api/bookings/checkAvailable
+server:
+  error:
+    include-message: always
+  port: 8087
+spring:
+  data:
+    cassandra:
+      schema-action: create_if_not_exists
+      keyspace-name: bookings
+      port: 9042
+      contact-points:
+        - 127.0.0.1
