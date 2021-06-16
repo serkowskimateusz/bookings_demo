@@ -21,7 +21,7 @@ services:
     depends_on:
       - "cassandra"
     ports:
-      - "29880:8080"
+      - "8087:8087"
     restart : on-failure:10
     environment:
       - TZ=Europe/Warsaw
