@@ -19,9 +19,17 @@ public class CassandraConfiguration extends AbstractCassandraConfiguration {
     @Value("${spring.data.cassandra.keyspace-name}")
     private String cassandraKeyspace;
 
+    @Value("${spring.data.cassandra.contact-points}")
+    private String cassandraContactPoints;
+
     @Override
     protected String getKeyspaceName() {
         return cassandraKeyspace;
+    }
+
+    @Override
+    protected String getContactPoints() {
+        return cassandraContactPoints;
     }
 
     @Override
